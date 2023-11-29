@@ -1,0 +1,147 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-family: Roboto+Flex;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &__logo-links-container {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 32px;
+  }
+
+  &__logo-wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 250px;
+    height: 49.107px;
+  }
+
+  .dark-mode {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 36px;
+    cursor: pointer;
+    &:hover {
+      color: $green_2;
+    }
+  }
+
+  &__menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    & span {
+      display: block;
+      background-color: #fff;
+      width: 24px;
+      height: 2px;
+      border-radius: 8px;
+      margin-bottom: 5px;
+      transition: .3s;
+    }
+    & span:last-child {
+      margin: 0;
+    }
+  }
+
+
+
+.nav__menu img {
+    width: 30px;
+}
+
+.menu-animated span:first-child {
+    transform-origin: bottom left;
+    transform: rotate(45deg) translate(-1px, -2px);
+    width: 24px;
+}
+
+.menu-animated span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-animated span:last-child {
+    transform-origin: bottom left;
+    transform: rotate(-45deg) translate(1px, 2px);
+    width: 24px;
+}
+
+  @media (max-width: 789px) {
+    .nav__logo {
+      width: 150px;
+      height: 29.464px;
+    }
+
+    &__list {
+      display: none;
+    }
+  
+    &__menu {
+      width: 50px;
+      height: 40px;
+      display: block;
+      background: none;
+    }
+    &__logo-links-container {
+      margin: 0 16px;
+    }
+  }
+ }
+
+ @media screen and (min-width: 426px) and (max-width: 789px) {
+  .btn {
+    max-width: 200px;
+  }
+ }
+
+.btn {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid $green_2;
+  background-color: $green_1;
+  font-size: 20px;
+  line-height: 23px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  &:hover {
+    background-color: #fff;
+    border: 1px solid $green_2;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+ 
+

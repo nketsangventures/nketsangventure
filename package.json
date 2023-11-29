@@ -1,0 +1,20 @@
+{
+  "name": "fourier",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "dev-host": "vite --host",
+    "build": "vite build",
+    "build-raw": "vite build --minify false",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5",
+    "sass":"^1.62.1",
+    "sass-loader":"^13.3.1"
+  },
+  "dependencies": {
+    "node-sass":"^9.0.0"
+  }
+}

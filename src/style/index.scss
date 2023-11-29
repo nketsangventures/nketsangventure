@@ -1,0 +1,268 @@
+
+@import './nullstyle.scss';
+@import './variables.scss';
+@import './navbar.scss';
+@import './menu.scss';
+
+@font-face {
+  font-family: 'DMSans-Medium';
+  src: url(../../public/font/DMSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'DMSans-Regular';
+  src: url(../../public/font/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Times';
+  src: url(../../public/font/TimesLTStd-Bold.ttf);
+}
+
+body, html {
+  background-color: black;
+}
+
+* {
+  font-family: 'DMSans-Regular';
+  color: #FFF;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.main-layout {
+  display: flex;
+  align-items: center;
+  height: 91%;
+}
+
+.main-bg {
+  background: url(../img/header-bg.jpeg);
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.filter-block {
+  position: absolute;
+  top: 142px;
+  left: -12%;
+  width: 1060px;
+  height: 1060px;
+  border-radius: 50%;
+  background: rgba(94, 94, 94, 0.57);
+  filter: blur(50px);
+  z-index: -1;
+}
+
+header {
+  width: 755px;
+  .title {
+    display: flex;
+    h1 {
+      font-size: 60px;
+      line-height: 72px;
+      font-family: 'Times';
+    }
+    img {
+      width: 100px;
+      height: 55.462px;
+    }
+  }
+  h2 {
+    color: #CCFFE5;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 70px;
+  }
+
+  p {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  button {
+    border: 3px solid #FFF;
+    padding: 16px 0;
+    font-size: 24px;
+    line-height: 36px;
+    background-color: inherit;
+    width: 219px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    &:hover {
+      border: 3px solid #CCFFE5;
+      color: #CCFFE5;
+    }
+  }
+
+
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 72px;
+  font-size: 20px;
+
+  .social-media {
+    display: flex;
+    gap: 24px;
+
+    .links {
+      display: flex;
+      gap: 32px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: 0.3s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+.modal {
+  max-width: 655px;
+  border-radius: 15px;
+  border: 1px solid $green_2;
+  background: $green_3;
+  padding: 45px 45px 90px;
+  text-align: center;
+  margin: auto;
+
+
+  .btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 64px;
+    .close-modal-btn img {
+      background-color: $green_3;
+      transition: 0.3s ease-in;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 42px;
+    color: $green-text;
+    margin-bottom: 16px;
+  }
+  p {
+    font-family: 'DMSans-Medium';
+    color: $green-text_2;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &::backdrop {
+    background: rgba(62, 62, 62, 0.54);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .main-layout {
+    height: 81%;
+  }
+
+  header {
+
+    .title {
+      h1 {
+        font-size: 30px;
+        line-height: 42px;
+      }
+      img {
+        display: none;
+      }
+    }
+    h2, p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    h2 {
+      margin-bottom: 160px;
+    }
+    button {
+      font-size: 18px;
+      line-height: 27px;
+      width: 173px;
+    }
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 32px;
+    font-size: 16px;
+    line-height: 24px;
+
+    .social-media {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 7px;
+
+      .links {
+        gap: 16px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 670px) {
+  .modal {
+    padding: 30px 22px 28px;
+    max-width: 302px;
+    .btn-wrap {
+      margin-bottom: 40px;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .filter-block {
+    left: -20%;
+  }
+}
+
+
+
